@@ -190,6 +190,10 @@ sudo dhcpcd
   </ul>
 </section>
 <section style="text-align: left;" data-state="messy">
+  <h1>Opdracht: </h1>
+  <h5>Verbind met je raspberry pi over SSH</h5>
+</section>
+<section style="text-align: left;" data-state="messy">
   <h1>Python</h1>
   <ul>
     <h5><li>Versies</li></h5>
@@ -198,8 +202,79 @@ sudo dhcpcd
   </ul>
 </section>
 <section style="text-align: left;" data-state="messy">
-  <h1>Installeren van python3</h1>
+  <h1>Python Versies</h1>
+  <ul>
+    <h5>
+      <li>Python 2.7</li>
+    </h5>
+    <ul>
+      <li>Legacy</li>
+      <li>Nog niet alles is geported</li>
+    </ul>
+    <h5>
+      <li>Python 3.x</li>
+    </h5>
+    <ul>
+      <li>Huidige standaard</li>
+      <li>De laatste versie is niet beschikbaar</li>
+      <li>Gebruikte versie</li>
+      <li>Niet geinstalleerd (TODO)</li>
+    </ul>
+    <h5>
+      <li>venv (Virtual Environment)</li>
+    </h5>
+    <ul>
+      <li>TBD</li>
+    </ul>
+  </ul>
 </section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Installeren Python 3</h1>
+  <pre style="float: left; width: 500px;"><code class="python">
+sudo apt-get install python{,3}-pip
+sudo pip3 install RPi.GPIO
+  </code></pre>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>RPi Blink</h1>
+  <img src="img/rpi-blink.png" alt="">
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Python Shell</h1>
+  <ul style="float: left;">
+    <li>Mogelkheid om python te testen zonder het schrijven van een scriptje</li>
+  </ul>
+  <pre style="float: left; width: 500px;"><code class="python">
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+GPIO.output(18, True)
+GPIO.output(18, False)
+  </code></pre>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Python Blink Output</h1>
+  <pre style="float: left; width: 500px;"><code class="python">
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+while (True):
+  GPIO.output(18, True)
+  time.sleep(0.5)
+  GPIO.output(18, False)
+  time.sleep(0.5)
+  </code></pre>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Opdracht</h1>
+  <h3>Steek de code van de vorige slide in een file en run dit</h3>
+</section>
+
+
 
       </div>
 
