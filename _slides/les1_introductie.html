@@ -1,0 +1,188 @@
+---
+title: "Les 1: Introductie"
+description: "Introductie Raspberry Pi & Python"
+reveal:
+---
+<style>
+html.messy body {
+  background:url("img/messy_desk.jpg");
+  background-position:105%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #002b36; }
+</style>
+<section style="text-align: left;" data-state="messy">
+  <h1>Introductie</h1>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Overzicht</h1>
+  <ul>
+    <h3>
+      <li>Regels</li>
+      <li>Inhoud</li>
+      <li>Wat heb je nodig?</li>
+      <li>Getting started</li>
+    </h3>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Regels</h1>
+  <ul>
+    <h5><li>Eten & Drinken</li></h5>
+    <ul>
+      <li>Alleen drinken in een sluitbare container</li>
+    </ul>
+    <h5>
+      <li>Op tijd komen</li>
+    </h5>
+    <ul>
+      <li>Chinese vrijwilligers<vrijwilligers</li>
+      <li>U blijft tot het einde</li>
+      <li>Max 4x onwettig afwezig</li>
+    </ul>
+    <h5><li>Niet bellen tijdens de les</li></h5>
+    <h5><li>Werk in alle rust</li></h5>
+    <h5><li>Materiaal word gevraagd</li></h5>
+    <h5><li>Ruim op na het labo</li></h5>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Inhoud</h1>
+  <ul>
+    <h5>
+      <li>Raspberry Pi</li>
+      <li>Python</li>
+      <li>Werkvorm</li>
+    </h5>
+    <ul>
+      <li>Labo's</li>
+      <li>Project</li>
+      <li>Vaardigheidsproef</li>
+    </ul>
+  </ul>
+</section>
+<section>
+  <h1 style="text-align: left;">Wat heb je nodig</h1>
+  <div style="display: flex;">
+    <ul style="width: 60%;">
+      <h5><li>Raspberry Pi (met WiFi)</li></h5>
+      <ul>
+        <li>RPi 3</li>
+        <li>WiFi Module</li>
+      </ul>
+      <h5><li>HDMI to DVI kabel</li></h5>
+      <h5><li>SD Kaart (8GB)</li></h5>
+      <h5><li>5V 1A Voeding</li></h5>
+
+    </ul>
+
+    <div style="height: 80%; display: flex; justify-content: space-around;">
+      <img class="plain" style="background: none; height: 20%; width: 20%;" src="img/rpi3.png" alt="">
+      <img class="plain" style="background: none; height: 20%; width: 20%;" src="img/hdmi_dvi_cable.png" alt="">
+      <img class="plain" style="background: none; height: 20%; width: 20%;" src="img/sd_card.png" alt="">
+      <img class="plain" style="background: none; height: 20%; width: 20%;" src="img/charger.png" alt="">
+    </div>
+  </div>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Getting Started</h1>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Operating System</h1>
+  <ul>
+    <h5>
+      <li>Linux based:</li>
+      <ul>
+        <li>Arch Linux</li>
+        <li>Suse</li>
+        <li>Raspbian</li>
+        <li>...</li>
+      </ul>
+      <li style="text-decoration: line-through;">Windows IoT Core</li>
+    </h5>  
+  </ul>
+  <div class="fragment">
+    <div style="display: flex; align-items: center;">
+      <h2>Tijdens de labo's - Raspbian Lite</h2>
+      <img class="plain" style="background:none; height: 150px; margin: 20px;" src="img/raspbian_logo.png" alt="">
+    </div>
+    <p>Ander OS op eigen risico</p>
+  </div>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Installeren Operating System</h1>
+  <ul>
+      <h5><li>Download</li></h5>
+      <ul>
+        <li><a href="https://www.raspberrypi.org/downloads/raspbian/">Klik hier</a></li>
+      </ul>
+      <h5><li>Windows</li></h5>
+      <ul>
+        <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/windows.md">Tutorial: klik Hier</a></li>
+      </ul>
+      <h5><li>Linux</li></h5>
+      <ul>
+        <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/linux.md">Tutorial: klik hier</a></li>
+      </ul>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Tweaks</h1>
+  <ul>
+    <h5><li>Passwoord veranderen</li></h5>
+    <ul>
+      <li><pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">sudo passwd</code></pre></li>
+    </ul>
+    <h5><li>Activeren SSH</li></h5>
+    <ul>
+      <li><pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">sudo systemctl enable ssh
+ sudo systemctl start ssh
+      </code></pre></li>
+    </ul>
+    <h5><li>Static IP</li></h5>
+    <ul>
+      <li><a href="https://github.com/AP-Elektronica-ICT/server_management/tree/master/les4#statisch-ip-adres">Meer info: klik hier</a></li>
+    </ul>
+    <h5><li>WiFi</li></h5>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Wifi</h1>
+  <ul>
+    <li>WPA Supplicant</li>
+    <li>Config file: <pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">/etc/wpa_supplicant/apwifi.conf</code></pre></li>
+    <li>
+      <pre style="width: 900px; box-shadow: none;"><code class="nohighlight">
+ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+network={
+  ssid="AP wifi"
+  proto=RSN
+  pairwise=CCMP
+  eap=PEAP
+  identity="*******"
+  password="*******"
+  key_mgmt=WPA-EAP
+}
+      </code></pre>
+    </li>
+    <li>Activatie</li>
+    <li>
+      <pre style="width: 900px; box-shadow: none;"><code class="nohighlight">
+sudo pa_supplicant -B -i interface -c /etc/wpa_supplicant/apwifi.conf
+sudo dhcpcd
+      </code></pre>
+    </li>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Python</h1>
+  <ul>
+    <h5><li>Versies</li></h5>
+    <h5><li>Interpreter</li></h5>
+    <h5><li>Hello World</li></h5>
+  </ul>
+</section>
+<section style="text-align: left;" data-state="messy">
+  <h1>Installeren van python3</h1>
+</section>
