@@ -129,6 +129,10 @@ html.messy body {
 <section style="text-align: left;" data-state="messy">
   <h1>Tweaks</h1>
   <ul>
+    <h5><li>Keyboard Updaten </li></h5>
+    <ul>
+      <li><pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">dpkg-reconfigure keyboard-configuration</code></pre></li>
+    </ul>
     <h5><li>Passwoord veranderen</li></h5>
     <ul>
       <li><pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">sudo passwd</code></pre></li>
@@ -149,6 +153,7 @@ html.messy body {
 <section style="text-align: left;" data-state="messy">
   <h1>Wifi</h1>
   <ul>
+    <li>Maak nieuwe entries in /etc/network/interfaces
     <li>WPA Supplicant</li>
     <li>Config file: <pre style="box-shadow: none;" ><code class="shell plain" style="box-shadow: none; display: inline;">/etc/wpa_supplicant/apwifi.conf</code></pre></li>
     <li>
@@ -160,7 +165,7 @@ network={
   proto=RSN
   pairwise=CCMP
   eap=PEAP
-  identity="*******"
+  identity="sxxxxxx@ap.be"
   password="*******"
   key_mgmt=WPA-EAP
 }
@@ -169,7 +174,7 @@ network={
     <li>Activatie</li>
     <li>
       <pre style="width: 900px; box-shadow: none;"><code class="nohighlight">
-sudo pa_supplicant -B -i interface -c /etc/wpa_supplicant/apwifi.conf
+sudo wpa_supplicant -B -i interface -c /etc/wpa_supplicant/apwifi.conf
 sudo dhcpcd
       </code></pre>
     </li>
@@ -227,10 +232,11 @@ sudo pip3 install RPi.GPIO
 </section>
 <section style="text-align: left;" data-state="messy">
   <h1>Python Shell</h1>
-  <ul style="float: left;">
-    <li>Mogelkheid om python te testen zonder het schrijven van een scriptje</li>
+  <div style="display:flex; flex-direction: column; align-items: left;">
+<ul>
+    <li>Mogelijkheid om python te testen zonder het schrijven van een scriptje</li>
   </ul>
-  <pre style="float: left; width: 500px;"><code class="python">
+  <pre style="width: 500px;"><code class="python">
 import RPi.GPIO as GPIO
 import time
 
@@ -239,7 +245,7 @@ GPIO.setup(18, GPIO.OUT)
 GPIO.output(18, True)
 GPIO.output(18, False)
   </code></pre>
-</section>
+</div></section>
 <section style="text-align: left;" data-state="messy">
   <h1>Python Blink Output</h1>
   <pre style="float: left; width: 500px;"><code class="python">
