@@ -1,0 +1,354 @@
+---
+title: "Les 2: Getting Started met Python"
+description: "Je eerste lijnen python schrijven"
+reveal:
+---
+<section>
+  <h1>Python: Getting Started</h1>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h5>
+      <li>Object Oriented</li>
+    </h5>
+    <h5>
+      <li>Dynamically Typed</li>
+    </h5>
+    <ul>
+      <li>Strongly Typed (<a href="https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language">Meer info: klik hier</a>)</li>
+    </ul>
+    <h5>
+      <li>Whitespace (Spaties + Tabs) wordt gebruikt om code blocks te definieëren</li>
+    </h5>
+    <h5>
+      <li>Beschikbaar voor meerdere platforms</li>
+    </h5>
+    <h5>
+      <li>Bruikbaar voor meerdere doeleinden</li>
+    </h5>
+  </ul>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>Comments</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+#this is a comment
+'''
+This is a multilinecomment
+'''
+    </code></pre>
+    <h2>
+      <li>Types</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+#strings
+var_tmp = "Dit zal een string zijn"
+var_tmp2 = "Dit zal ook een string zijn"
+
+#integer
+int1 = 42
+int2 = int('42')
+
+#float
+alpha = 39.78
+beta = float("0.074")
+
+    </code></pre>
+  </ul>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>List (Arrays)</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+# list zijn de arrays van python
+arr = [1, 3, 3, 7,]
+print (arr[0])
+# 1
+    </code></pre>
+    <a href="https://docs.python.org/3/tutorial/datastructures.html">Meer info: klik hier</a>
+    <h2>
+      <li>Dictonaries</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+#dictionaries
+studenten = {"gepetto":0, "charel":"niet ok", "alfredo":12}
+print(studenten['gepetto'])
+#0
+0
+print(studenten['charel']) 
+#niet ok
+    </code></pre>
+    <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">Meer info: klik hier</a>
+  </ul>
+</section>
+<section>
+  <div style="display:flex; flex-direction: column; align-items: center;">
+    <h1>Python Basics</h1>
+    <h2>Indentation</h2>
+    <ul>
+      <h5>
+        <li>Geneste code wordt aangegeven met indentaties</li>
+        <li>Identaties spaties of tabs</li>
+        <ul>
+          <li>Niet mixen</li>
+        </ul>
+        <li></li>
+        <li></li>
+      </h5>
+    </ul>
+
+    <div style="display: flex; align-items: top; justify-content: space-around; width: 1400px;">
+      <div style="display:flex; flex-direction: column;">
+        <h3>Brackets voor nesting code</h3>
+        <pre style="width: 550;"><code class="c">
+if(thisIsTrue){
+  doStuff();
+}
+else{
+  doOtherStuff();
+}
+        </code></pre>
+      </div>
+      <div style="display:flex; flex-direction: column;">
+        <h3>Identatie voor nesting code</h3>
+        <pre style="width: 550;"><code class="python">
+if thisIsTrue:
+    doStuff()
+else:
+    doOtherStuff()
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>For Loops</li>
+    </h2>
+    <ul>
+      <h4>
+        <li>Range</li>
+      </h4>
+      <pre style="width: 900px;"><code class="python">
+# for loop gebaseerd op integer
+for i in range(5):
+    print(i)
+#0
+#...
+#4
+      </code></pre>
+      <h4>
+        <li>List</li>
+      </h4>
+      <pre style="width: 900px;"><code class="python">
+arr = [1, 3, 3, 7,]
+for item in arr:
+    print(item)
+      </code></pre>
+    </ul>
+  </ul>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>For Loops</li>
+    </h2>
+    <ul>
+      <h4>
+        <li>Dictonary</li>
+      </h4>
+      <pre style="width: 900px;"><code class="python">
+studenten = {"gepetto":0, "charel":"niet ok", "alfredo":12}
+for k,v in studenten.items():
+    print("Student: "+str(k)+" - Commentaar: "+str(v))
+#Student: gepetto - Commentaar: 0
+#Student: charel - Commentaar: niet ok
+#Student: Alfredo - Commentaar: 12
+      </code></pre>
+    </ul>
+    <h2>
+      <li>While Loops</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+x = 3
+while x; 
+    print(x)
+    x = x - 1
+#3
+#2
+#1
+    </code></pre>
+  </ul>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>Functies</h2>
+    <ul>
+      <h4>
+        <li>Zonder argument</li>
+      </h4>
+      <pre style="width: 900px;"><code class="python">
+def debug():
+    print("Error")
+      </code></pre>
+      <h4>
+        <li>Met argument</li>
+      </h4>
+      <pre style="width: 900px;"><code class="python">
+def debug(msg):
+    print("Error: "+str(msg))
+      </code></pre>
+    </ul>
+  </ul>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>Classes</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+class debugging:
+    error_level = 5
+    def print_err(self, msg):
+        print('Error Level: ' + str(self.error_level))
+        print(msg)
+
+d = debuggingg()
+print(d.error_level)
+d.print_err("Crtical Error, Going Nuclear")
+
+#5
+#Error Level: 5
+#Critical Error; Going Nuclear
+    </code></pre>
+    <a href="https://docs.python.org/3/tutorial/classes.html">Meer info: klik hier</a>
+  </ul>
+</section>
+<section>
+  <div style="display:flex; flex-direction: column; align-items: center;">
+    <h1>Python Basics</h1>
+    <h2>Modules</h2>
+    <ul>
+      <h5>
+        <li>Modules zijn: </li>
+        <ul>
+          <li>Volledige pakketen</li>
+          <li>Individuele classes</li>
+        </ul>
+      </h5>
+    </ul>
+    <h3>Voorbeeld Project</h3>
+    <pre style="width: 400px;"><code class="bash">
+myproj
+├── debug.py
+└── main.py
+    </code></pre>
+    <div style="display: flex; align-items: top; justify-content: space-around; width: 1700px;">
+      <div style="display:flex; flex-direction: column;">
+        <h3>debug.py</h3>
+        <pre style="width: 750px;"><code class="python">
+class debugging:
+    error_level = 5
+    def print_err(self, msg):
+        print('Error Level: ' + str(self.error_level))
+        print(msg)
+        </code></pre>
+      </div>
+      <div style="display:flex; flex-direction: column;">
+        <h3>main.py</h3>
+        <pre style="width: 750px;"><code class="python">
+import debug
+c = debug.debugging()
+print(c.error_level)
+
+#5 
+        </code></pre>
+      </div>
+    </div>
+    <a href="https://docs.python.org/3/tutorial/classes.html">Meer info: klik hier</a>
+  </div>
+</section>
+<section>
+  <div style="display:flex; flex-direction: column; align-items: center;">
+    <h1>Python Basics</h1>
+    <h2>Modules als pakket</h2>
+    <div style="display: flex; align-items: top; justify-content: space-around; width: 1700px;">
+      <div style="display:flex; flex-direction: column;">
+        <h3>debug.py</h3>
+        <pre style="width: 750px;"><code class="python">
+class debugging:
+    error_level = 5
+    def print_err(self, msg):
+        print('Error Level: ' + str(self.error_level))
+        print(msg)
+        </code></pre>
+      </div>
+      <div style="display:flex; flex-direction: column;">
+        <h3>main.py</h3>
+        <pre style="width: 750px;"><code class="python">
+import debug
+c = debug.debugging()
+print(c.error_level)
+
+#5 
+        </code></pre>
+      </div>
+    </div>
+    <h3>Module als individuele class</h3>
+    <div style="display: flex; align-items: top; justify-content: space-around; width: 1700px;">
+      <div style="display:flex; flex-direction: column;">
+        <h3>debug.py</h3>
+        <pre style="width: 750px;"><code class="python">
+class debugging:
+    error_level = 5
+    def print_err(self, msg):
+        print('Error Level: ' + str(self.error_level))
+        print(msg)
+        </code></pre>
+      </div>
+      <div style="display:flex; flex-direction: column;">
+        <h3>main.py</h3>
+        <pre style="width: 750px;"><code class="python">
+from debug import debugging
+c = debugging()
+print(c.error_level)
+
+#5 
+        </code></pre>
+      </div>
+    </div>
+    <a href="https://docs.python.org/3/tutorial/classes.html">Meer info: klik hier</a>
+  </div>
+</section>
+<section>
+  <h1>Python Basics</h1>
+  <ul>
+    <h2>
+      <li>Error Handling: Try/Except/Finally</li>
+    </h2>
+    <pre style="width: 900px;"><code class="python">
+try:
+    #blocking functie
+    socket.recv()
+except KeyboardInterrupt:
+    #Ctrl + C op het keyboard in een terminal venster
+    print("interrupt received, stopping…")
+finally:
+    #clean up for proper exit
+    cleanup()
+    </code></pre>
+    <a href="https://docs.python.org/3/tutorial/errors.html">Meer info: klik hier</a>
+  </ul>
+</section>
