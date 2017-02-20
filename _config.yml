@@ -8,7 +8,6 @@ collections:
   slides:
     output: true
   labs:
-    layout: labs
     output: true
 
 defaults:
