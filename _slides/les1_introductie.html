@@ -171,14 +171,31 @@ network={
 }
       </code></pre>
     </li>
-    <li>Activatie</li>
+    <li>Manuele Activatie</li>
     <li>
       <pre style="width: 900px; box-shadow: none;"><code class="nohighlight">
-sudo wpa_supplicant -B -i interface -c /etc/wpa_supplicant/apwifi.conf
+sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/apwifi.conf
 sudo dhcpcd
       </code></pre>
     </li>
   </ul>
+</section>
+<section>
+  <h1>WiFi</h1>
+  <em><b>/etc/network/interfaces</b></em>
+    <pre style="width: 900px; box-shadow: none;"><code class="nohighlight">
+source-directory /etc/network/interfaces.d
+auto lo
+iface lo inet loopback
+auto eth0
+iface eth0 inet manual
+  address 192.168.1.55
+  netmask 255.255.255.0
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-conf /etc/wpa_supplicant/apwifi.conf
+    </code></pre>
 </section>
 <section style="text-align: left;" data-state="messy">
   <h1>Opdracht: </h1>
