@@ -11,7 +11,7 @@ Ter voorbereiding zijn er enkele slides aangemaakt die je moeten helpen bij het
 schrijven van je eerste lijn python (Les 2: Getting Started with Python). Lees
 deze slides door met de examples die worden meegegeven met de distributie van
 de GPIO modules
-[https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/](Klik hier voor de examples)
+[Klik hier voor de examples](https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/)
 
 ## Voorbereiding
 Ga door de slides en lees de examples
