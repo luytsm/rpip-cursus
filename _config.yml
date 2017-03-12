@@ -1,6 +1,6 @@
 name: jekyll-reveal 
 markdown: redcarpet
-highlighter: pygments
+highlighter: rogue
 
 baseurl: /rpip-cursus
 
