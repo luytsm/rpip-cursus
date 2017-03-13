@@ -70,7 +70,9 @@ Zie volgende link voor deze stap te voltooien
 
 * Integreer de verschillende taken in een werkend geheel.
 * Pas de oplossing aan zodat je:
+  * Het IP doorstuurt naar as private message naar jezelf
   * Het IP alleen maar doorstuurt als het veranderd is
+* Upload de opdracht naar learning
  
 
 # Meer informatie:
