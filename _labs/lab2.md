@@ -44,7 +44,7 @@ token = "mytoken"
 sc = SlackClient(token)
 resp = sc.api_call(
         "chat.postMessage",
-        channel="#2ea"
+        channel="#2ea",
         text="Posting from Script"
 )
 ```
